@@ -1,11 +1,11 @@
 import { expect as expectCDK, matchTemplate, MatchStyle } from '@aws-cdk/assert';
 import * as cdk from '@aws-cdk/core';
-import * as EcrStack from '../lib/ecr-stack-stack';
+import * as EcrStack from '../lib/ecr-stack';
 
 test('Empty Stack', () => {
     const app = new cdk.App();
     // WHEN
-    const stack = new EcrStack.EcrStackStack(app, 'MyTestStack');
+    const stack = new EcrStack.EcrStack(app, 'MyTestStack');
     // THEN
     expectCDK(stack).to(matchTemplate({
       "Resources": {}

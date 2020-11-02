@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import 'source-map-support/register';
 import * as cdk from '@aws-cdk/core';
-import { EcrStackStack } from '../lib/ecr-stack-stack';
+import { EcrStack } from '../lib/ecr-stack';
 
 const app = new cdk.App();
-new EcrStackStack(app, 'EcrStackStack');
+new EcrStack(app, 'EcrStack');
